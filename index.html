@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="petsList">
+<head>
+	<meta charset="UTF-8">
+	<title>Pets</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="bower_components/ng-trans-css/ng-trans.css">
+</head>
+<body>
+	<main ng-controller="PetsListController" >
+		<checkbox-set pets="allPets" selected-pets="allSelectedPets" ></checkbox-set>
+	</main>
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/checklist-model/checklist-model.js"></script>	
+	<script src="app/app.js"></script>
+	<script src="app/PetDirective.js"></script>
+
+</body>
+</html>
