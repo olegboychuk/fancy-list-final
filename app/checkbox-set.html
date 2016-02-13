@@ -2,14 +2,14 @@
 	<h3>Choose your pet</h3>
 	<span class="tree-state-check" ng-click="toogleAll()" ng-class="{'partial-cb':partial, 'empty': unchecked, 'checked': !unchecked && !partial}" >
 	    <input type="checkbox" id="cntr">
-	    <label class="lab-all" >All</label>
+	    <label class="lab-all" >All/None</label>
 	    <p class="test"></p>
 	</span>
 	
 	<ul>
 		<li ng-repeat="pet in pets track by $index">
-			<input type="checkbox" name={{$index}} id="{{pet}}" checklist-model="selectedPets" checklist-value="pet" >
-			<label for="{{pet}}" ng-bind="pet"></label>
+			<input type="checkbox" name={{$index}} id="{{pet}}" checklist-model="selectedPets" checklist-value="pet">
+			<label for="{{pet}}" ng-bind="pet | capitalize "></label>
 		</li>
     </ul>
 

@@ -5,10 +5,20 @@ app.factory('PetsFactory', function(){
 	var pets = ["cat", "dog", "fish", "dinosaur"];
 
 	PetsFactory.getPets =  function(){
+		
 		return pets;
 	}
 
 	return PetsFactory;
+});
+
+
+app.filter('capitalize', function() {
+  return function(input, scope) {
+    if (input!=null)
+       input = input.toLowerCase();
+       return input.substring(0,1).toUpperCase()+input.substring(1);
+  }
 });
 
 app.controller('PetsListController', function( $scope,PetsFactory ){
